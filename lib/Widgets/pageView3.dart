@@ -3,8 +3,9 @@ import 'package:todolistapp/Widgets/constantheight.dart';
 import 'package:todolistapp/appStyle/appStyle.dart';
 
 class Pageview3 extends StatelessWidget {
-  const Pageview3({super.key});
-
+  const Pageview3({
+    super.key,
+  });
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -28,28 +29,6 @@ class Pageview3 extends StatelessWidget {
               style: Appstyle.styleRegular16(context),
             ),
             SizedBox3(),
-            Expanded(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    "BACK",
-                    style: Appstyle.stylefaint16(context),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 15, horizontal: 18),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5),
-                        color: const Color(0xFF8875FF)),
-                    child: Text(
-                      "NEXT",
-                      style: Appstyle.stylefaint16(context),
-                    ),
-                  )
-                ],
-              ),
-            )
           ],
         ),
       ),
