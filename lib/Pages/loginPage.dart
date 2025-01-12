@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todolistapp/Widgets/containerbutton.dart';
 import 'package:todolistapp/Widgets/textFieldpage.dart';
 import 'package:todolistapp/appStyle/appStyle.dart';
 
@@ -34,7 +35,43 @@ class _LoginpageState extends State<Loginpage> {
               "Password",
               style: Appstyle.styleRegular16(context),
             ),
-            CustomPasswordField(hintText: "Enter your Password")
+            CustomPasswordField(hintText: "Enter your Password"),
+            Spacer(),
+            Containerbutton(requiredText: "Login"),
+            Row(
+              children: [
+                Divider(
+                  color: borderColor,
+                ),
+                Text("Or"),
+                Divider(
+                  color: borderColor,
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 50,
+            ),
+            RegisterButtonAuth(
+              requiredText: "Login with Google",
+              assetPath: "assets/google.png",
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            RegisterButtonAuth(
+              requiredText: "Login with Apple",
+              assetPath: "assets/apple.png",
+            ),
+            RichText(
+              text: TextSpan(children: [
+                TextSpan(
+                    text: "Don't have an account?",
+                    style: Appstyle.stylelittleLong12(context)),
+                TextSpan(
+                    text: "Register", style: Appstyle.styleRegister12(context))
+              ]),
+            )
           ],
         ),
       ),

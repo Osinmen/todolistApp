@@ -43,6 +43,23 @@ class Appstyle {
         fontWeight: FontWeight.w200,
         fontFamily: "Lato");
   }
+
+  static TextStyle styleRegister12(context) {
+    return TextStyle(
+      fontSize: 12,
+      fontFamily: "Lato",
+      fontWeight: FontWeight.w100,
+      color: const Color(0xFF535353),
+    );
+  }
+
+  static TextStyle stylelittleLong12(context) {
+    return TextStyle(
+        fontSize: 12,
+        fontFamily: "Lato",
+        fontWeight: FontWeight.w300,
+        color: Colors.white);
+  }
 }
 
 Color AppPrimaryColor = const Color(0xFF8875FF);
