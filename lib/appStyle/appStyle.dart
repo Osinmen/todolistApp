@@ -34,4 +34,16 @@ class Appstyle {
         fontSize: 16,
         fontWeight: FontWeight.w100);
   }
+
+  //static TextStyle styleregula
+  static TextStyle styletextField16(context) {
+    return TextStyle(
+        color: const Color(0xFF535353),
+        fontSize: 16,
+        fontWeight: FontWeight.w200,
+        fontFamily: "Lato");
+  }
 }
+
+Color AppPrimaryColor = const Color(0xFF8875FF);
+Color borderColor = const Color(0xff979797);

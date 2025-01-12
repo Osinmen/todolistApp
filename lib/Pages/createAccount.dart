@@ -40,15 +40,15 @@ class _CreateAccountState extends State<CreateAccount> {
               child: Container(
                 height: MediaQuery.of(context).size.width * 0.1,
                 width: MediaQuery.of(context).size.width,
+                decoration: BoxDecoration(
+                  color: const Color(0xFF8875FF),
+                  borderRadius: BorderRadius.circular(5),
+                ),
                 child: Center(
                   child: Text(
                     "LOGIN",
                     style: Appstyle.stylefaint16(context),
                   ),
-                ),
-                decoration: BoxDecoration(
-                  color: const Color(0xFF8875FF),
-                  borderRadius: BorderRadius.circular(5),
                 ),
               ),
             ),
@@ -59,17 +59,16 @@ class _CreateAccountState extends State<CreateAccount> {
               child: Container(
                 height: MediaQuery.of(context).size.width * 0.1,
                 width: MediaQuery.of(context).size.width,
+                decoration: BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.circular(5),
+                    border: Border.all(color: AppPrimaryColor, width: 2.0)),
                 child: Center(
                   child: Text(
                     "CREATE ACCOUNT",
                     style: Appstyle.stylefaint16(context),
                   ),
                 ),
-                decoration: BoxDecoration(
-                    color: Colors.black,
-                    borderRadius: BorderRadius.circular(5),
-                    border:
-                        Border.all(color: const Color(0xFF8875FF), width: 2.0)),
               ),
             ),
           ],
