@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:todolistapp/Pages/createAccount.dart';
 import 'package:todolistapp/Pages/loginPage.dart';
 import 'package:todolistapp/Pages/pageViewStack.dart';
+import 'package:todolistapp/Pages/registerPage.dart';
 import 'package:todolistapp/Pages/test.dart';
 
 void main() {
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Loginpage(),
+      home: const RegisterPage(),
     );
   }
 }
