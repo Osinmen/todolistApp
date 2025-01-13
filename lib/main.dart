@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:todolistapp/Pages/createAccount.dart';
 import 'package:todolistapp/Pages/loginPage.dart';
-import 'package:todolistapp/Pages/splashScreen.dart';
+import 'package:todolistapp/Pages/pageViewStack.dart';
 import 'package:todolistapp/Pages/test.dart';
 
 void main() {

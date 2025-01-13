@@ -64,3 +64,18 @@ class CustomPasswordField extends StatelessWidget {
         ));
   }
 }
+
+class CustomRow extends StatelessWidget {
+  PageController pageController = PageController();
+
+  CustomRow({super.key, required this.pageController});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        ElevatedButton(onPressed: () {}, child: Text("press me")),
+      ],
+    );
+  }
+}

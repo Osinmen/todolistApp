@@ -63,14 +63,24 @@ class _LoginpageState extends State<Loginpage> {
               requiredText: "Login with Apple",
               assetPath: "assets/apple.png",
             ),
-            RichText(
-              text: TextSpan(children: [
-                TextSpan(
-                    text: "Don't have an account?",
-                    style: Appstyle.stylelittleLong12(context)),
-                TextSpan(
-                    text: "Register", style: Appstyle.styleRegister12(context))
-              ]),
+            const SizedBox(
+              height: 20,
+            ),
+            Align(
+              alignment: Alignment.center,
+              child: RichText(
+                text: TextSpan(children: [
+                  TextSpan(
+                      text: "Don't have an account?",
+                      style: Appstyle.styleRegister12(context)),
+                  TextSpan(
+                      text: "Register",
+                      style: Appstyle.stylelittleLong12(context))
+                ]),
+              ),
+            ),
+            const SizedBox(
+              height: 20,
             )
           ],
         ),

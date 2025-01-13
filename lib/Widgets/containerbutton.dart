@@ -58,11 +58,13 @@ class RegisterButtonAuth extends StatelessWidget {
                 requiredText,
                 style: Appstyle.styleRegular16(context),
               ),
+              const SizedBox(
+                height: 20,
+              ),
             ],
           ),
         ),
       ),
     );
-    ;
   }
 }

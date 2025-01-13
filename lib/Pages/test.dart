@@ -8,56 +8,58 @@ class Test extends StatefulWidget {
 }
 
 class _TestState extends State<Test> {
-  TextEditingController _controller = TextEditingController();
-  bool _textFieldFilled = false;
-  bool _buttonClickable = false;
+  bool _isButtonActive = true;
+  late TextEditingController controller;
 
   @override
   void initState() {
     super.initState();
-    _controller = TextEditingController();
+    TextEditingController controller;
   }
 
   @override
   void dispose() {
+    controller.dispose();
     super.dispose();
-    _controller.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Column(
-        children: [
-          Container(
-            color: _buttonClickable ? Colors.blue : Colors.red,
-            height: 100,
-            width: double.infinity,
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          TextFormField(
-            onChanged: (content) {
-              if (content == "") {
-                _textFieldFilled = false;
-                if (_textFieldFilled) {
-                  setState(() {
-                    _buttonClickable = false;
-                  });
-                }
-              }
-            },
-            controller: _controller,
-            decoration: InputDecoration(
-                contentPadding: const EdgeInsets.only(left: 20),
-                enabledBorder:
-                    OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
+      body: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          children: <Widget>[
+            TextFormField(
+              decoration: InputDecoration(
+                enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(30),
+                    borderSide: BorderSide(
+                      color: Colors.black,
+                    )),
                 focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(20))),
-          )
-        ],
+                    borderRadius: BorderRadius.circular(30),
+                    borderSide: BorderSide(
+                      color: Colors.black,
+                    )),
+              ),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            ElevatedButton(
+              onPressed: () {},
+              child: Text("click me"),
+              style: ElevatedButton.styleFrom(
+                disabledBackgroundColor: Colors.red,
+              ),
+            ),
+            const SizedBox(
+              height: 40,
+            ),
+          ],
+        ),
       ),
     );
   }
